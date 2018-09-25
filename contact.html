@@ -18,7 +18,7 @@
     <meta property="og:image" content="img/og_thumbnail.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="">
-    <meta name="twitter:creator" content="@farleymatters">
+    <meta name="twitter:creator" content="@amhazeem">
     <meta name="twitter:title" content="Azeem Animashaun">
     <meta name="twitter:description" content="Designer, Front-end Developer &amp; Mentor. I design and code beautifully simple things, and I love what I do.">
     <meta name="twitter:image" content="img/og_thumbnail.png">
@@ -31,6 +31,11 @@
     </script>
     <script defer="" src="js/all.js"></script>
   </head>
+  <style type="text/css">
+  	#thankyou_message{
+  		display: none;
+  	}
+  </style>
   <body>
     <nav class="navbar is-transparent is-planner">
       <div class="container">
@@ -55,8 +60,17 @@
         </div>
       </section>
       <section class="is-white">
-        <div class="container">     
-          <form id="form" accept-charset="UTF-8" action="https://usebasin.com/f/363b98eca5af" method="POST">
+      	<div class="notification is-success thankyou_message" id="thankyou_message">
+  <button class="delete"></button>
+  <h2>
+        		<em>Thanks </em> for contacting me,
+        		I would get back to you shortly
+        	</h2>
+</div>
+        <div class="container myform">    
+
+        
+          <form id="form" class="gform" accept-charset="UTF-8" action="https://script.google.com/macros/s/AKfycbw417XZPx8-o-IxpvUiGGTKBnd1n4d3E-Nyw_oG0g/exec" method="POST">
             <div class="columns is-centered">
               <div class="column is-half">
                 <div class="field">
@@ -85,6 +99,17 @@
                 </div>
               </div>
             </div>
+            
+            <div class="columns is-centered">
+              <div class="column is-one-third">
+                <div class="field">
+                  <!--input id must be honeypot or else it wont work-->
+  <label class="sr-only"></label>
+  <input id="honeypot" type="text" name="honeypot" value="" style="display: none;" />
+  <!--the rest of your form-->
+                </div>
+              </div>
+            </div>            
             <div class="columns is-centered">
               <div class="column is-one-third">
                 <div class="field">
@@ -99,6 +124,6 @@
       </section>
     </div>
     <script src="js/main-min.js"></script>
-    <script src="../usebasin.com/f/363b98eca5af/ahoy.js" async="" defer=""></script>
+    <script data-cfasync="false" type="text/javascript" src="./js/handler.js"></script>
   </body>
 </html>
